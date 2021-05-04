@@ -10,7 +10,7 @@ body {
     font-family: 'Lato';
 }
 
-from Bulma
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -42,6 +42,13 @@ from Bulma
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .shop-now-button:hover,
@@ -89,14 +96,27 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
-    cursor: pointer;
-}
-
 .btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 /* -------------------------------- Media Queries */
@@ -123,14 +143,13 @@ a.category-badge > span.badge:hover {
     }
 }
 
-
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-.header-container {
-    padding-top: 116px;
-}
+    .header-container {
+        padding-top: 116px;
+    }
 
-body {
-    height: calc(100vh - 116px);
-}
+    body {
+        height: calc(100vh - 116px);
+    }
 }
